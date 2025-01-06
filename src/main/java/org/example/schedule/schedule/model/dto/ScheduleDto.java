@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ScheduleDto {
     private Long id;
+    private Long userId;
     private String username;
     private String title;
     private String content;
@@ -21,6 +22,8 @@ public class ScheduleDto {
 
     public ScheduleDto(Schedule schedule) {
         this.id = schedule.getId();
+        this.username=schedule.getUser().getUsername();
+        this.userId= schedule.getUser().getUserId();
         this.title = schedule.getTitle();
         this.content = schedule.getContent();
         this.createdAt = schedule.getCreatedAt();

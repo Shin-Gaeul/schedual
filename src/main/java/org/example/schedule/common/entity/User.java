@@ -15,7 +15,7 @@ import lombok.Setter;
 public class User  extends BaseEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long userid;
+    private Long userId;
 
     @Column(nullable = false)
     private String username;
